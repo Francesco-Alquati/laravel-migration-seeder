@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\TrainsController as TrainController;
+use App\Http\Controllers\TrainController as TrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,4 @@ use App\Http\Controllers\TrainsController as TrainController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
-
-Route::get('/trains', [TrainsController::class, 'index'])->name('trains');
+Route::get('/', [TrainController::class, 'index']);
