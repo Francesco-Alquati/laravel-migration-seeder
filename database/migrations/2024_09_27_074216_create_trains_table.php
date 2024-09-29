@@ -22,7 +22,7 @@ return new class extends Migration
             $table->dateTime('arrival_time');
             $table->string('code');
             $table->tinyInteger('train_wagons')->nullable();
-            $table->boolean('on-time')->default(true);
+            $table->boolean('on_time')->default(true);
             $table->boolean('cancelled')->default(false);
             $table->timestamps();
         });
